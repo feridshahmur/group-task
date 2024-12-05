@@ -1,5 +1,4 @@
 
-
 E-LEARNING PLATFORM MAIN FEATURES 
 - - - - - - - - - - - - - - - - - - 
 1. Auth System (login/register of teachers & students)
