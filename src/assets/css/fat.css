@@ -1,0 +1,161 @@
+/* Ümumi stil */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(243, 244, 246); /* Gray-100 */
+}
+
+.content {
+    flex: 1; /* Məzmunu uzadır ki, footer aşağıda qalsın */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation */
+.nav {
+    background-color: rgb(99, 102, 241); /* Indigo-600 */
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    margin: 0 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: rgb(219, 234, 254); /* Light Indigo */
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: none; /* Default olaraq gizlənir */
+    flex-direction: column;
+    gap: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(31, 41, 55); /* Gray-800 */
+}
+
+.about-text {
+    font-size: 1.25rem;
+    color: rgb(107, 114, 128); /* Gray-600 */
+    margin-top: 16px;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: rgb(99, 102, 241); /* Indigo-600 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgb(67, 56, 202); /* Hover effekti */
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(99, 102, 241); /* Indigo-600 */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* --- RESPONSIVE DİZAYN --- */
+
+/* Mobil cihazlar (768px-dən kiçik) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Default gizli olur */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(99, 102, 241); /* Indigo-600 */
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex; /* Kiçik ekranlarda görünür */
+    }
+
+    .button-group {
+        flex-direction: column; /* Düymələr alt-alta düzülür */
+        gap: 10px;
+    }
+}
