@@ -1,15 +1,16 @@
-/* Ümumi stil */
+*{
+    font-family: "Poppins", sans-serif;
+}
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(243, 244, 246); /* Gray-100 */
+    background-color: #F4F9FF; 
 }
 
 .content {
-    flex: 1; /* Məzmunu uzadır ki, footer aşağıda qalsın */
+    flex: 1;
 }
 
 .container {
@@ -18,9 +19,9 @@ body {
     padding: 20px;
 }
 
-/* Navigation */
+
 .nav {
-    background-color: rgb(99, 102, 241); /* Indigo-600 */
+    background-color:  rgb(117, 50, 250); 
     padding: 15px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -32,7 +33,7 @@ body {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 1.7rem;
     font-weight: bold;
     color: white;
     text-decoration: none;
@@ -40,7 +41,7 @@ body {
 
 .nav-links {
     display: flex;
-    flex-wrap: wrap;
+    
 }
 
 .nav-item {
@@ -48,15 +49,15 @@ body {
     text-decoration: none;
     margin: 0 16px;
     transition: color 0.3s ease;
+    font-size: 1.1rem;
 }
 
 .nav-item:hover {
-    color: rgb(219, 234, 254); /* Light Indigo */
+    color: rgb(219, 234, 254); 
 }
 
-/* Hamburger Menu Icon */
 .menu-icon {
-    display: none; /* Default olaraq gizlənir */
+    display: none;
     flex-direction: column;
     gap: 5px;
     border: none;
@@ -71,57 +72,188 @@ body {
     border-radius: 3px;
 }
 
-/* About Section */
 .about {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+   
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     text-align: center;
-    padding: 60px 20px;
+    padding: 100px 20px 50px; 
+    gap: 40px;
+}
+
+.about-content {
+    max-width: 600px;
 }
 
 .about-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    color: rgb(31, 41, 55); /* Gray-800 */
+    color: rgb(27, 80, 194); 
+    margin-bottom: 20px;
 }
 
 .about-text {
     font-size: 1.25rem;
-    color: rgb(107, 114, 128); /* Gray-600 */
-    margin-top: 16px;
+    color: rgb(21, 53, 122); 
 }
 
 .button-group {
     display: flex;
+    justify-content: center;
     gap: 20px;
-    margin-top: 20px;
 }
 
-.btn {
+.btn-teacher {
     padding: 15px 30px;
-    background-color: rgb(99, 102, 241); /* Indigo-600 */
-    color: white;
+    background-color: rgb(79, 70, 229); 
     border: none;
+    color: white;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.2rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.btn:hover {
-    background-color: rgb(67, 56, 202); /* Hover effekti */
+.btn-teacher:hover {
+    background-color: rgb(48, 43, 160); 
     transform: scale(1.05);
 }
 
-.btn:active {
+.btn-teacher:active {
+    transform: scale(0.95);
+}
+.btn-student {
+    padding: 15px 30px;
+    background-color: rgb(79, 70, 229); 
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-student:hover {
+    background-color: rgb(48, 43, 160); 
+    transform: scale(1.05);
+}
+
+.btn-student:active {
     transform: scale(0.95);
 }
 
-/* Footer */
+.about-image-container {
+    max-width: 500px;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* General Section Styling */
+.our-teachers {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .our-teachers h1 {
+    font-size: 36px;
+    color: rgb(27, 80, 194);
+    margin-bottom: 40px;
+  }
+  
+  /* Teacher Section Styling */
+  .teacher-section {
+    background-color: rgb(232, 244, 255);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .teacher-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  /* Reverse Styling for Kanan */
+  .teacher-section.reverse .teacher-container {
+    flex-direction: row-reverse;
+  }
+  
+  /* Teacher Image Styling */
+  .teacher-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgb(99, 102, 241);
+  }
+  
+  /* Teacher Info Styling */
+  .teacher-info {
+    max-width: 600px;
+  }
+  
+  .teacher-info h2 {
+    font-size: 28px;
+    color: rgb(27, 80, 194);
+    margin-bottom: 20px;
+  }
+  
+  .teacher-info h3 {
+    font-size: 20px;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .teacher-info p {
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .teacher-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .teacher-section.reverse .teacher-container {
+      flex-direction: column;
+    }
+  
+    .teacher-image img {
+      margin-bottom: 20px;
+    }
+  
+    .teacher-info h2 {
+      font-size: 24px;
+    }
+  
+    .teacher-info h3 {
+      font-size: 18px;
+    }
+  
+    .teacher-info p {
+      font-size: 14px;
+    }
+  }
+  
+
+
 .footer {
-    background-color: rgb(99, 102, 241); /* Indigo-600 */
+    background-color: rgb(117, 50, 250); 
     color: white;
     text-align: center;
     padding: 20px;
@@ -130,32 +262,38 @@ body {
     width: 100%;
 }
 
-/* --- RESPONSIVE DİZAYN --- */
 
-/* Mobil cihazlar (768px-dən kiçik) */
+
 @media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-content p{
+        font-size: 1rem;
+    }
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
     .nav-links {
-        display: none; /* Default gizli olur */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: rgb(99, 102, 241); /* Indigo-600 */
-        padding: 10px 0;
-        text-align: center;
+        background-color:  rgb(117, 50, 250); 
+        padding-top: 8px;
+        align-items: center;
     }
 
     .nav-item {
         margin: 10px 0;
-    }
-
-    .menu-icon {
-        display: flex; /* Kiçik ekranlarda görünür */
-    }
-
-    .button-group {
-        flex-direction: column; /* Düymələr alt-alta düzülür */
-        gap: 10px;
     }
 }

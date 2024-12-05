@@ -1,9 +1,15 @@
-// Menu toggle funksiyası
-document.getElementById("menu-btn").addEventListener("click", function () {
+// ./src/script/fat.js
+document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("menu-btn");
     const navLinks = document.getElementById("nav-links");
-    if (navLinks.style.display === "flex") {
-        navLinks.style.display = "none"; // Qapalı vəziyyət
-    } else {
-        navLinks.style.display = "flex"; // Açıq vəziyyət
-    }
-});
+  
+    menuBtn.addEventListener("click", () => {
+      
+      if (navLinks.style.display === "flex") {
+        navLinks.style.display = "none";
+      } else {
+        navLinks.style.display = "flex";
+      }
+    });
+  });
+  

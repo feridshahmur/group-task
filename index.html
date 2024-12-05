@@ -1,50 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navigation</title>
-    <link rel="stylesheet" href="./src/assets/css/fat.css">
-</head>
-<body class="bg-gray-100 font-sans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive About Section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/assets/css/fat.css" />
+  </head>
+  <body class="bg-gray-100 font-sans">
     <div class="content">
-        <!-- Navigation -->
-        <nav class="nav">
-            <div class="container">
-                <a href="#" class="logo">My Site</a>
-                <button id="menu-btn" class="menu-icon">
-                    <!-- Hamburger Menu Icon -->
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div id="nav-links" class="nav-links">
-                    <a href="#" class="nav-item">Home</a>
-                    <a href="#" class="nav-item">About</a>
-                    <a href="#" class="nav-item">Contact</a>
-                    <a href="#" class="nav-item">Blog</a>
-                </div>
-            </div>
-        </nav>
-
-        <!-- About Section -->
-        <div class="about">
-            <h1 class="about-title">About Us</h1>
-            <p class="about-text">
-                We provide solutions for modern web design, focusing on responsive and user-friendly experiences.
-            </p>
-            <div class="button-group">
-                <button class="btn">Teacher Sign Up</button>
-                <button class="btn">Student Sign Up</button>
-            </div>
+      <!-- Navigation -->
+      <nav class="nav">
+        <div class="container">
+          <a href="#" class="logo">Classroom</a>
+          <button id="menu-btn" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div id="nav-links" class="nav-links">
+            <a href="#" class="nav-item">Home</a>
+            <a href="#" class="nav-item">About</a>
+            <a href="#" class="nav-item">Contact</a>
+            <a href="#" class="nav-item">Blog</a>
+          </div>
         </div>
+      </nav>
+
+      <!-- About Section -->
+      <div class="about">
+        <div class="about-content">
+          <h1 class="about-title">About Us</h1>
+          <p class="about-text">
+            Welcome to Classroom Management, where learning and teaching meet innovation. Our platform is designed to empower educators and students, providing a seamless environment to manage assignments, track progress, and foster collaboration.
+
+We believe education should be simple, engaging, and accessible to everyone. With tools tailored for both teachers and learners, our goal is to make the classroom experience more organized and productive, whether it's in-person or online.
+          </p>
+          <div class="button-group">
+            <button class="btn-teacher">Teacher sign in</button>
+            <button class="btn-student">Student sign in</button>
+          </div>
+        </div>
+        <div class="about-image-container">
+          <img
+            src="https://files.oaiusercontent.com/file-1F6t5njdtpngj1WZKav1JC?se=2024-12-05T13%3A06%3A22Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D0cb5ce76-0c6f-4bc7-8936-09d055da37bc.webp&sig=old5w1O5LtQ9CkXBnEXD7A5lmT0%2BAzqlfboh8ls021o%3D"
+            alt="AI Illustration"
+            class="about-image"
+          />
+        </div>
+      </div>
     </div>
+    <section id="our-teachers" class="our-teachers">
+      <h1>Our Teachers</h1>
+    
+      <!-- Sunal Teacher Section -->
+      <section id="teacher-section" class="teacher-section">
+        <div class="teacher-container">
+          <div class="teacher-image">
+            <img src="./src/assets/images/sunalm.jpg" alt="Teacher Sunal" />
+          </div>
+          <div class="teacher-info">
+            <h2>SUNAL JABILI</h2>
+            <h3>Frontend Developer</h3>
+            <p>
+              Kursumuzun ən geniş qəlbli müəllimiyəm və uşaqlara task verməyi çox
+              sevirəm. Onları çox sevirəm (şübhəli).
+            </p>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Kanan Teacher Section -->
+      <section id="teacher-section" class="teacher-section reverse">
+        <div class="teacher-container">
+          <div class="teacher-image">
+            <img src="./src/assets/images/kenanm.jpg" alt="Teacher Kanan" />
+          </div>
+          <div class="teacher-info">
+            <h2>KANAN AMİROV</h2>
+            <h3>Frontend Developer</h3>
+            <p>
+              Mən kursun ən anlayışlı və ən gülərüz müəllimiyəm (opsiyonel).
+            </p>
+          </div>
+        
+        </div>
+      </section>
+    </section>
+    
+    
 
     <!-- Footer -->
     <footer class="footer">
-        <p>© 2024 My Site. All rights reserved.</p>
+      <p>© 2024 My Site. All rights reserved.</p>
     </footer>
-
     <script src="./src/script/fat.js"></script>
-</body>
+  </body>
 </html>
+
