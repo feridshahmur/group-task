@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +17,7 @@
                 <span class="material-icons-outlined text-2xl">menu</span>
             </button>
             <div class="text-xl font-bold text-blue-900">
-                Admin<span class="text-indigo-800">Panel</span>
+                Class<span class="text-indigo-800">room</span>
             </div>
             <div class="flex items-center space-x-2">
                 <span class="material-icons-outlined p-2 text-2xl cursor-pointer hover:text-indigo-800 transition-transform duration-300 hover:scale-110 hidden md:block">search</span>
@@ -29,34 +30,17 @@
     </header>
 
     <div class="pt-16 max-w-7xl mx-auto flex">
-        <aside class="sidebar fixed lg:static w-[240px] bg-indigo-50 h-[calc(100vh-4rem)] lg:h-auto transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-45 overflow-y-auto p-4">
-            <div class="bg-white rounded-xl shadow-lg mb-6 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <aside class="sidebar fixed lg:static w-[400px] bg-indigo-50 h-[calc(100vh-4rem)] lg:h-auto transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-45 overflow-y-auto p-4 static">
+            
+            <div class="bg-white rounded-xl shadow-lg p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                 <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
                     <span class="material-icons-outlined mr-2">dashboard</span>
                     Home
                     <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
                 </a>
                 <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
-                    <span class="material-icons-outlined mr-2">tune</span>
-                    Some menu item
-                    <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
-                </a>
-                <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
-                    <span class="material-icons-outlined mr-2">file_copy</span>
-                    Another menu item
-                    <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
-                </a>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-lg p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
                     <span class="material-icons-outlined mr-2">face</span>
                     Profile
-                    <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
-                </a>
-                <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
-                    <span class="material-icons-outlined mr-2">settings</span>
-                    Settings
                     <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
                 </a>
                 <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
@@ -65,18 +49,32 @@
                     <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
                 </a>
             </div>
+            <h1 class="my-6 d-flex text-center text-2xl ">Tasks</h1>
+            <div class="bg-white rounded-xl shadow-lg mb-6 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl all-tasks">
+                <div class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
+                    <span class="material-icons-outlined mr-2">task</span>
+                    React
+                    <span class="ml-32">0/100</span>
+                    <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
+                </div>
+                
+            </div>
         </aside>
-
+        
         <main class="flex-1 p-4">
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up" style="animation-delay: 0.1s">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 tasks">
+                <div class="bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up static z-1" style="animation-delay: 0.1s">
+                    <h3 class="text-xl font-bold text-indigo-800">Stats Card 1</h3>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up static z-1" style="animation-delay: 0.1s">
+                    <h3 class="text-xl font-bold text-indigo-800">Stats Card 1</h3>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up static z-1" style="animation-delay: 0.1s">
                     <h3 class="text-xl font-bold text-indigo-800">Stats Card 1</h3>
                 </div>
             </div>
         </main>
+        <script src="./src/script/studen-dashboard.js" type="module"></script>
     </div>
-
-    <script src="./src/script/studen-dashboard.js"></script>
 </body>
 </html>

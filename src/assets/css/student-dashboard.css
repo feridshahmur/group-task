@@ -14,10 +14,10 @@
     }
 }
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}
+} */
 
 @keyframes slideUp {
     from {
@@ -41,3 +41,7 @@
 .animate-slide-up {
     animation: slideUp 0.5s ease-out forwards;
 }
+
+/* body{
+    max-width: 88% !important;
+} */
