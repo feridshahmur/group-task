@@ -191,7 +191,6 @@ async function createTaskCards() {
           deadline: tDeadlineUpdate.value,
         };
 
-        // console.log("aaa")
         editDataByIdPatch("tasks", dataIdEdit, newData);
       });
     });
