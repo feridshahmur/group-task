@@ -167,7 +167,7 @@ async function createTaskCards() {
       // })
       const selectedTask = res.data.find((q) => q.id === taskId);
        console.log(selectedTask)
-      e.preventDefault();
+      // e.preventDefault();
 
       // deleteDataById("tasks",dataId);
       // btn.parentElement.parentElement.remove();
@@ -204,7 +204,7 @@ async function createStudentTable() {
     tabElem.className =
       "bg-white rounded-xl shadow-lg mt-6 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl";
 
-    tabElem.innerHTML = `
+    tabElem.innerHTML += `
               <div class = "flex justify-between">
                 <h4 class = "stud-name">${student.fullName}</h4>
                 <button class = " btn-stud-task px-6 py-2 min-w-[50px] text-center text-white bg-indigo-800 border border-indigo-800 rounded active:text-indigo-800 hover:bg-transparent hover:text-indigo-800 focus:outline-none focus:ring" data-id = "${student.id}">Tasks</button>

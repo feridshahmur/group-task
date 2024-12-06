@@ -17,7 +17,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     users.forEach(user => {
       if (user.email === email && user.password === password) {
         userFound = true; // İstifadəçi tapılıb
-        window.location.replace('index.html'); 
+        window.location.replace('teacher-dashboard.html'); 
         user.islogged === true
       }
     });

@@ -40,7 +40,7 @@ document.getElementById('registerForm').addEventListener('submit', function (eve
   }
 
   let userData = {
-    name: fullname,
+    fullName: fullname,
     email: email,
     password: password,
     profileImage: null,
