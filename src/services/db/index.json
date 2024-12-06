@@ -2,12 +2,22 @@
   "teachers": [
     {
       "id": "1",
-      "fullName": "Kanan Amirov",
+      "name": "Kanan Amirov",
       "email": "kanan.amirov@code.edu.az",
       "username": "KananAmir",
       "password": "Amirov123",
       "major": "programming",
+      "islogged": "true",
       "profileImage": "https://cdn3d.iconscout.com/3d/premium/thumb/teacher-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--professor-education-profession-pack-people-icons-4936175.png?f=webp"
+      "isOnPage": true
+
+    },
+    {
+      "id": "7559",
+      "name": "kanan",
+      "email": "feridsahmur@gmiail.com",
+      "password": "F3rid2005",
+      "islogged": false
     }
   ],
   "students": [
@@ -19,6 +29,7 @@
       "password": "Aliyev123",
       "profileImage": "https://static.vecteezy.com/system/resources/previews/021/770/056/non_2x/avatar-of-a-student-character-free-vector.jpg",
       "teacherId": "2",
+      "islogged": "true",
       "grades": [
         {
           "taskId": "1",
@@ -27,85 +38,22 @@
       ]
     },
     {
-      "id": "2",
-      "fullName": "Hassan Aliyev",
-      "email": "hassan.aliyev@example.com",
-      "username": "HassanAliyev",
-      "password": "Hassan123",
-      "profileImage": "https://static.vecteezy.com/system/resources/previews/021/770/056/non_2x/avatar-of-a-student-character-free-vector.jpg",
-      "teacherId": "1",
-      "grades": [
-        {
-          "taskId": "2",
-          "grade": 85
-        },
-        {
-          "taskId": "3",
-          "grade": 90
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "fullName": "Leyla Karimova",
-      "email": "leyla.karimova@example.com",
-      "username": "LeylaKari",
-      "password": "Leyla123",
-      "profileImage": "https://static.vecteezy.com/system/resources/previews/021/770/056/non_2x/avatar-of-a-student-character-free-vector.jpg",
-      "teacherId": "3",
-      "grades": [
-        {
-          "taskId": "1",
-          "grade": 65
-        },
-        {
-          "taskId": "4",
-          "grade": 92
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "fullName": "Murat Rahimov",
-      "email": "murat.rahimov@example.com",
-      "username": "MuratRahimov",
-      "password": "Murat123",
-      "profileImage": "https://static.vecteezy.com/system/resources/previews/021/770/056/non_2x/avatar-of-a-student-character-free-vector.jpg",
-      "teacherId": "2",
-      "grades": [
-        {
-          "taskId": "5",
-          "grade": 78
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "fullName": "Samira Aliyeva",
-      "email": "samira.aliyeva@example.com",
-      "username": "SamiraAliyeva",
-      "password": "Samira123",
-      "profileImage": "https://static.vecteezy.com/system/resources/previews/021/770/056/non_2x/avatar-of-a-student-character-free-vector.jpg",
-      "teacherId": "1",
-      "grades": [
-        {
-          "taskId": "2",
-          "grade": 88
-        },
-        {
-          "taskId": "3",
-          "grade": 93
-        }
-      ]
+      "id": "5241",
+      "name": "fatime",
+      "email": "fatimebexseliyeva@icloud.com",
+      "password": "Fatime45456",
+      "profileImage": "",
+      "teacherId": "7559",
+      "islogged": false
     }
   ],
   "tasks": [
     {
       "id": "1",
-      "title": "local storage",
-      "description": "lorem ipsum dolor",
-      "topic": "REACT",
-      "deadline": "Today at 5:00 PM",
+      "title": "sadad",
+      "description": "REACT PREACYTONASD,AS;D",
+      "topic": "legacov25@gmail.com",
+      "deadline": "2024-12-27",
       "createdAt": "2024-05-09 00:04:00",
       "teacherId": "1",
       "assignments": [
