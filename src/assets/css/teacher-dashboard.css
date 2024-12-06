@@ -55,9 +55,9 @@
 .active-task{
   display:none;
 }
-.disp-none{
+.-none{
   display:none !important;
 }
-.disp-block{
+.-block{
   display:block;
 }

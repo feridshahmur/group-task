@@ -31,20 +31,14 @@
   ],
   "tasks": [
     {
-      "id": "1",
-      "title": "local storage",
+      "id": "e96b",
+      "title": "aslan mmdov",
       "description": "lorem ipsum dolor",
       "topic": "REACT",
-      "deadline": "Today at 5:00 PM",
-      "createdAt": "2024-05-09 00:04:00",
+      "deadline": "2024-12-25",
+      "createdAt": "2024-12-06T13:54:58.488Z",
       "teacherId": "1",
-      "assignments": [
-        {
-          "studentId": "1",
-          "taskUrl": "https://github.com/KananAmir/AZMP101-JS&quot",
-          "assignDate": "2024-05-09 00:04:00"
-        }
-      ]
+      "assignments": []
     }
   ],
   "classes": [
