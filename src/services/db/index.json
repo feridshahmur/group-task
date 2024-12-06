@@ -2,13 +2,20 @@
   "teachers": [
     {
       "id": "1",
-      "fullName": "Kanan Amirov",
+      "name": "Kanan Amirov",
       "email": "kanan.amirov@code.edu.az",
       "username": "KananAmir",
       "password": "Amirov123",
       "major": "programming",
-      "islogged":"true",
+      "islogged": "true",
       "profileImage": "https://cdn3d.iconscout.com/3d/premium/thumb/teacher-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--professor-education-profession-pack-people-icons-4936175.png?f=webp"
+    },
+    {
+      "id": "7559",
+      "name": "kanan",
+      "email": "feridsahmur@gmiail.com",
+      "password": "F3rid2005",
+      "islogged": false
     }
   ],
   "students": [
@@ -20,14 +27,22 @@
       "password": "Aliyev123",
       "profileImage": "https://static.vecteezy.com/system/resources/previews/021/770/056/non_2x/avatar-of-a-student-character-free-vector.jpg",
       "teacherId": "2",
-      "islogged":"true",
-
+      "islogged": "true",
       "grades": [
         {
           "taskId": "1",
           "grade": 70
         }
       ]
+    },
+    {
+      "id": "5241",
+      "name": "fatime",
+      "email": "fatimebexseliyeva@icloud.com",
+      "password": "Fatime45456",
+      "profileImage": "",
+      "teacherId": "7559",
+      "islogged": false
     }
   ],
   "tasks": [
@@ -53,7 +68,11 @@
       "id": "1",
       "className": "azmp",
       "teacherId": "2",
-      "studentIds": ["1", "2", "3"]
+      "studentIds": [
+        "1",
+        "2",
+        "3"
+      ]
     }
   ]
 }
