@@ -1,4 +1,4 @@
-const BASE_URL = "https://json-server-deploy-delta.vercel.app/students";
+const BASE_URL = "http://localhost:8000";
 
 const endpoints = {
   teachers: "teachers",
