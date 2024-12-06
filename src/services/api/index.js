@@ -1,5 +1,5 @@
 import axios from "axios";
-import BASE_URL from "../../constants/api.js";
+import BASE_URL, { endpoints } from "../../constants/api.js";
 
 //get all data
 async function getAllData(endpoint) {
@@ -47,5 +47,13 @@ async function editDataById(endpoint, id, payload) {
     console.log(error.message);
   }
 }
+async function editDataByIdPatch(endpoint, id, payload) {
+  try {
+    const response = await axios.patch(`${BASE_URL}/${endpoint}/${id}`, payload);
+    return response;
+  } catch (error) {
+    console.log(error.message);
+  }
+}
 
-export { getAllData, getDataById, deleteDataById, addNewData, editDataById };
+export { getAllData, getDataById, deleteDataById, addNewData, editDataById, editDataByIdPatch };
