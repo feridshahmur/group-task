@@ -7,7 +7,9 @@
       "username": "KananAmir",
       "password": "Amirov123",
       "major": "programming",
-      "profileImage": "https://cdn3d.iconscout.com/3d/premium/thumb/teacher-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--professor-education-profession-pack-people-icons-4936175.png?f=webp"
+      "profileImage": "https://cdn3d.iconscout.com/3d/premium/thumb/teacher-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--professor-education-profession-pack-people-icons-4936175.png?f=webp",
+      "isLogged": true,
+      "isOnPage": true
     }
   ],
   "students": [
@@ -50,7 +52,11 @@
       "id": "1",
       "className": "azmp",
       "teacherId": "2",
-      "studentIds": ["1", "2", "3"]
+      "studentIds": [
+        "1",
+        "2",
+        "3"
+      ]
     }
   ]
 }

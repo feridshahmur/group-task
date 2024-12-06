@@ -46,3 +46,18 @@
 .tc-dsh-main{
   cursor: pointer;
 }
+
+
+
+/* task-active */
+
+
+.active-task{
+  display:none;
+}
+.disp-none{
+  display:none !important;
+}
+.disp-block{
+  display:block;
+}

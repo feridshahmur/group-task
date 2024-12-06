@@ -1,5 +1,55 @@
 import axios from "axios";
-import { getAllData } from "../services/api";
+import { addNewData, deleteDataById, editDataByIdPatch, getAllData } from "../services/api";
+
+
+let body = document.querySelector("body");
+// adding-new task
+
+let addBtn = document.querySelector(".add-btn");
+let taskName = document.querySelector(".task-name");
+let taskDesc = document.querySelector(".task-description");
+let taskTopic = document.querySelector(".task-topic");
+let taskDeadline = document.querySelector(".task-deadline");
+
+// console.log(window.location.pathname)
+
+
+
+addBtn.addEventListener("click",async function addNewTask(e){
+    e.preventDefault();
+    let isOnPage = {
+        isOnPage:true
+    };
+    if(window.location.pathname === "/teacher-dashboard.html"){
+        await editDataByIdPatch("teachers",1,isOnPage)
+    }
+    
+    let teachers = await getAllData("teachers");
+    let teacher = teachers.data.find((d) => d.isOnPage === true)
+
+    let taskContent = {
+      title: taskName.value.trim(),
+      description: taskDesc.value.trim(),
+      topic: taskTopic.value.trim(),
+      deadline: taskDeadline.value,
+      createdAt: new Date().toISOString(),
+      teacherId:  teacher.id,
+      assignments: [
+
+      ]
+    }
+    await addNewData("tasks",taskContent)
+
+    resetInput();
+    createTaskCards();
+});
+
+function resetInput(){
+    taskName.value = "";
+    taskDesc.value = "";
+    taskTopic.value = "";
+    taskDeadline.value = "";
+}
 
  // Mobile menu functionality
  const mobileMenuButton = document.querySelector('.mobile-menu-button');
@@ -50,6 +100,7 @@ let studTasks = document.querySelector(".stud-tasks-cards")
 
 async function createTaskCards(){
     let res = await getAllData("tasks");
+    studTasks.innerHTML = "";
     res.data.forEach(task => {
         let tabElem = document.createElement("div");
         tabElem.className = "bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up flex flex-col gap-3";
@@ -62,11 +113,55 @@ async function createTaskCards(){
                     <span class="grade-point">Deadline: ${task.deadline}</span>
                     </div>
                     <div class = "flex gap-2 justify-end mt-2">
-                        <button class = "delete btn-stud-task px-4 py-1 min-w-[40px] text-center text-white bg-blue-800 border border-blue-800 rounded-lg active:text-blue-800 hover:bg-transparent hover:text-blue-800 focus:outline-none focus:ring">Edit</button>
-                    <button class = "edit btn-stud-task px-4 py-1 min-w-[40px] text-center text-white bg-blue-800 border border-blue-800 rounded-lg active:text-blue-800 hover:bg-transparent hover:text-blue-800 focus:outline-none focus:ring">Delete</button>
+                        <button class = "edit btn-stud-task px-4 py-1 min-w-[40px] text-center text-white bg-blue-800 border border-blue-800 rounded-lg active:text-blue-800 hover:bg-transparent hover:text-blue-800 focus:outline-none focus:ring">Edit</button>
+                    <button class = "delete btn-stud-task px-4 py-1 min-w-[40px] text-center text-white bg-blue-800 border border-blue-800 rounded-lg active:text-blue-800 hover:bg-transparent hover:text-blue-800 focus:outline-none focus:ring" data-id = "${task.id}">Delete</button>
                     </div>
                     `
         studTasks.appendChild(tabElem)
+     });
+
+     let dltBtn = document.querySelectorAll(".delete");
+     let editBtn = document.querySelectorAll(".edit");
+     
+     dltBtn.forEach(btn => {
+        btn.addEventListener("click",function(){
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3730A3",
+                cancelButtonColor: "#E0E7FF",
+                confirmButtonText: "Yes, delete it!"
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    let dataId = btn.getAttribute("data-id");
+                    deleteDataById("tasks",dataId);
+                    btn.parentElement.parentElement.remove();
+                  Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                  });
+                }
+              });
+            
+        })
+     });
+     
+     editBtn.forEach(btn => {
+        btn.addEventListener("click",function(){
+            let editModal = document.createElement("div");
+            editModal.className = "p-6";
+            editModal.innerHTML = `
+           
+           `
+           body.appendChild(editModal);
+
+            // let dataId = btn.getAttribute("data-id");
+            // deleteDataById("tasks",dataId);
+            // btn.parentElement.parentElement.remove();
+        })
      });
 }
 createTaskCards();
@@ -99,6 +194,21 @@ async function createStudentTable(){
 
 }
 createStudentTable();
+
+// Task display form
+let activateForm = document.querySelector(".activate-form");
+let activeTask = document.querySelector(".active-task");
+let clsTaskForm = document.querySelector(".close-form");
+
+clsTaskForm.classList.add("disp-none");
+activateForm.addEventListener("click",function(){
+    activeTask.classList.add("disp-block")
+    clsTaskForm.classList.remove("disp-none");
+    clsTaskForm.addEventListener("click",function(){
+        activeTask.classList.remove("disp-block")
+        clsTaskForm.classList.add("disp-none");
+    })
+})
 
 
 
