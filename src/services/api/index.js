@@ -1,5 +1,5 @@
 import axios from "axios";
-import BASE_URL from "../../constants/api.js";
+import BASE_URL, { endpoints } from "../../constants/api.js";
 
 //get all data
 async function getAllData(endpoint) {
