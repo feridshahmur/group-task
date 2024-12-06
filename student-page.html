@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Info</title>
+    <link rel="stylesheet" href="./index.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Only keeping necessary custom styles, using Tailwind classes for colors */
+        :root {
+            --header-height: 4rem;
+            --sidebar-width: 240px;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .animate-slide-down {
+            animation: slideDown 0.5s ease-out;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.5s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-indigo-50 min-h-screen overflow-x-hidden">
+    <div class="overlay fixed inset-0 bg-indigo-900/50 z-40 hidden opacity-0 transition-opacity duration-300"></div>
+
+    <header class="fixed w-full bg-white text-indigo-800 z-50 shadow-lg animate-slide-down">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between h-16">
+            <button class="mobile-menu-button p-2 lg:hidden">
+                <span class="material-icons-outlined text-2xl">menu</span>
+            </button>
+            <div class="text-xl font-bold text-blue-900">
+                Admin<span class="text-indigo-800">Panel</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span
+                    class="material-icons-outlined p-2 text-2xl cursor-pointer hover:text-indigo-800 transition-transform duration-300 hover:scale-110 hidden md:block">search</span>
+                <span
+                    class="material-icons-outlined p-2 text-2xl cursor-pointer hover:text-indigo-800 transition-transform duration-300 hover:scale-110 hidden md:block">notifications</span>
+                <img class="w-10 h-10 rounded-full transition-transform duration-300 hover:scale-110 object-cover"
+                    src="https://i.pinimg.com/564x/de/0f/3d/de0f3d06d2c6dbf29a888cf78e4c0323.jpg" alt="Profile">
+            </div>
+        </div>
+    </header>
+
+    <div class="pt-16 max-w-7xl mx-auto flex">
+        <aside
+            class="sidebar fixed lg:static w-[240px] bg-indigo-50 h-[calc(100vh-4rem)] lg:h-auto transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-45 overflow-y-auto p-4">
+            <div
+                class="bg-white rounded-xl shadow-lg mb-6 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <a href="#"
+                    class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
+                    <span class="material-icons-outlined mr-2">dashboard</span>
+                    Home
+                    <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
+                </a>
+                <a href="#"
+                    class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
+                    <span class="material-icons-outlined mr-2">tune</span>
+                    Some menu item
+                    <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
+                </a>
+                <a href="#"
+                    class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
+                    <span class="material-icons-outlined mr-2">file_copy</span>
+                    Another menu item
+                    <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
+                </a>
+            </div>
+
+            <div
+                class="bg-white rounded-xl shadow-lg p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <a href="#"
+                    class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
+                    <span class="material-icons-outlined mr-2">face</span>
+                    Profile
+                    <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
+                </a>
+                <a href="#"
+                    class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
+                    <span class="material-icons-outlined mr-2">settings</span>
+                    Settings
+                    <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
+                </a>
+                <a href="#"
+                    class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
+                    <span class="material-icons-outlined mr-2">power_settings_new</span>
+                    Log out
+                    <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="flex-1 p-4">
+
+            <div class="flex flex-col lg:flex-row gap-4 mb-6">
+
+                <div class="flex-1 bg-indigo-100 border border-indigo-200 rounded-xl p-6 animate-fade-in frame">
+                    <img class="s-student-img frame"
+                        src="https://static.vecteezy.com/system/resources/previews/024/724/631/non_2x/a-happy-smiling-young-college-student-with-a-book-in-hand-isolated-on-a-transparent-background-generative-ai-free-png.png"
+                        alt="">
+
+                </div>
+
+                <div class="flex-1 bg-blue-100 border border-blue-200 rounded-xl p-6 animate-fade-in card">
+
+                    <h2 class="text-4xl md:text-5xl text-blue-900">
+                        <strong>General Information</strong>
+                    </h2>
+
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <td id="studentId"></td>
+                        </tr>
+                        <tr>
+                            <th>Fullname</th>
+                            <td id="studentFullname"></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td id="studentEmail"></td>
+                        </tr>
+                        <tr>
+                            <th>Username</th>
+                            <td id="studentUsername"></td>
+                        </tr>
+                        <tr>
+                            <th>Teacher ID</th>
+                            <td id="studentTeacherId"></td>
+                        </tr>
+                    </table>
+
+                    <ul id="gradesList">
+                        <!-- API-dən gələn tapşırıq və qiymətlər buraya əlavə olunacaq -->
+                    </ul>
+
+
+                    <a href="#" id="openModalBtn"
+                        class="inline-block mt-8 px-8 py-2 rounded-full text-xl font-bold text-white bg-blue-800 hover:bg-blue-900 transition-transform duration-300 hover:scale-105">
+                        Grades
+                    </a>
+                    <a href="#" id="editLink"
+                        class="inline-block mt-8 px-8 py-2 rounded-full text-xl font-bold text-white bg-blue-800 hover:bg-blue-900 transition-transform duration-300 hover:scale-105">
+                        Edit
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <div class="bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up card1 card"
+                    style="animation-delay: 0.1s">
+                    <h3 class="text-xl font-bold text-indigo-800">Average</h3>
+
+                    <table>
+                        <tr>
+                            <th>Transcript</th>
+                            <td><a href="https://github.com/safarxe" style="color: blue;">LINK</a></td>
+                        </tr>
+                        <tr>
+                            <th>Overall Grade</th>
+                            <td>82.46% (no dinámico) </td>
+                        </tr>
+                        <tr>
+                            <th>Homework</th>
+                            <td>25%</td>
+                        </tr>
+                        <tr>
+                            <th>Quiz</th>
+                            <td>25%</td>
+                        </tr>
+                        <tr>
+                            <th>Final Exam</th>
+                            <td>50%</td>
+                        </tr>
+                    </table>
+
+
+                    </table>
+                </div>
+
+                <!-- <div class="bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up card2 card"
+                    style="animation-delay: 0.2s">
+                    <h3 class="text-xl font-bold text-indigo-800">Assingments</h3>
+                    <table>
+                        <tr>
+                            <th>Student ID</th>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th>Task URL</th>
+                            <td><a href="https://github.com/KananAmir/AZMP101-JS" style="color: blue;">Link</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Assign Date</th>
+                            <td>2024-05-09 00:04:00</td>
+                        </tr>
+
+                    </table>
+                </div> -->
+                <!-- <div class="bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up card3 card"
+                    style="animation-delay: 0.3s">
+                    <h3 class="text-xl font-bold text-indigo-800">Card 3</h3>
+                </div> -->
+            </div>
+        </main>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h2 class="text-2xl mb-4">Edit</h2>
+            <form id="editForm">
+                <div class="mb-4">
+                    <label for="editid" class="block text-sm font-medium text-gray-700">ID</label>
+                    <input type="text" id="editID" name="fullname" value="Ali Jalilov"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <div class="mb-4">
+                    <label for="editFullname" class="block text-sm font-medium text-gray-700">Fullname</label>
+                    <input type="text" id="editFullname" name="fullname" value="Ali Jalilov"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <div class="mb-4">
+                    <label for="editEmail" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="editEmail" name="email" value="ali.jalilov@code.edu.az"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <div class="mb-4">
+                        <label for="editUsername" class="block text-sm font-medium text-gray-700">Username</label>
+                        <input type="text" id="editUsername" name="fullname" value="Ali Jalilov"
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+
+                </div>
+                <div class="flex justify-end">
+                    <button type="button" onclick="closeEditModal()"
+                        class="mr-4 px-6 py-2 bg-gray-500 text-white rounded-md">
+                        Cancel
+                    </button>
+                    <button type="submit" class=" py-2 px-6 bg-blue-600 text-white rounded-md"> Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h2>Modal Başlığı</h2>
+            <ul id="gradesList">
+        </div>
+    </div>
+
+
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.querySelector('.overlay');
+
+        function toggleMobileMenu() {
+            sidebar.classList.toggle('translate-x-0');
+            overlay.classList.toggle('hidden');
+            setTimeout(() => overlay.classList.toggle('opacity-0'), 0);
+            document.body.style.overflow = sidebar.classList.contains('translate-x-0') ? 'hidden' : '';
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        overlay.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu on window resize if open
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024 && sidebar.classList.contains('translate-x-0')) {
+                toggleMobileMenu();
+            }
+        });
+
+        // Notification animation
+        const notificationIcon = document.querySelector('.material-icons-outlined:nth-child(2)');
+        setInterval(() => {
+            notificationIcon.classList.add('scale-110');
+            setTimeout(() => notificationIcon.classList.remove('scale-110'), 200);
+        }, 5000);
+    </script>
+    <script src="./student-page-edit.js" type="module"></script>
+    <script type="module" src="./student-page-grades.js" type="module"></script>
+
+</body>
+
+</html>
