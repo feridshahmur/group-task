@@ -25,6 +25,78 @@
           "grade": 70
         }
       ]
+    },
+    {
+      "id": "2",
+      "fullName": "Hassan Aliyev",
+      "email": "hassan.aliyev@example.com",
+      "username": "HassanAliyev",
+      "password": "Hassan123",
+      "profileImage": "https://static.vecteezy.com/system/resources/previews/021/770/056/non_2x/avatar-of-a-student-character-free-vector.jpg",
+      "teacherId": "1",
+      "grades": [
+        {
+          "taskId": "2",
+          "grade": 85
+        },
+        {
+          "taskId": "3",
+          "grade": 90
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "fullName": "Leyla Karimova",
+      "email": "leyla.karimova@example.com",
+      "username": "LeylaKari",
+      "password": "Leyla123",
+      "profileImage": "https://static.vecteezy.com/system/resources/previews/021/770/056/non_2x/avatar-of-a-student-character-free-vector.jpg",
+      "teacherId": "3",
+      "grades": [
+        {
+          "taskId": "1",
+          "grade": 65
+        },
+        {
+          "taskId": "4",
+          "grade": 92
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "fullName": "Murat Rahimov",
+      "email": "murat.rahimov@example.com",
+      "username": "MuratRahimov",
+      "password": "Murat123",
+      "profileImage": "https://static.vecteezy.com/system/resources/previews/021/770/056/non_2x/avatar-of-a-student-character-free-vector.jpg",
+      "teacherId": "2",
+      "grades": [
+        {
+          "taskId": "5",
+          "grade": 78
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "fullName": "Samira Aliyeva",
+      "email": "samira.aliyeva@example.com",
+      "username": "SamiraAliyeva",
+      "password": "Samira123",
+      "profileImage": "https://static.vecteezy.com/system/resources/previews/021/770/056/non_2x/avatar-of-a-student-character-free-vector.jpg",
+      "teacherId": "1",
+      "grades": [
+        {
+          "taskId": "2",
+          "grade": 88
+        },
+        {
+          "taskId": "3",
+          "grade": 93
+        }
+      ]
     }
   ],
   "tasks": [
@@ -50,7 +122,11 @@
       "id": "1",
       "className": "azmp",
       "teacherId": "2",
-      "studentIds": ["1", "2", "3"]
+      "studentIds": [
+        "1",
+        "2",
+        "3"
+      ]
     }
   ]
 }

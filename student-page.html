@@ -146,6 +146,7 @@
                     <img class="s-student-img frame"
                         src="https://static.vecteezy.com/system/resources/previews/024/724/631/non_2x/a-happy-smiling-young-college-student-with-a-book-in-hand-isolated-on-a-transparent-background-generative-ai-free-png.png"
                         alt="">
+
                 </div>
 
                 <div class="flex-1 bg-blue-100 border border-blue-200 rounded-xl p-6 animate-fade-in card">
@@ -157,25 +158,30 @@
                     <table>
                         <tr>
                             <th>ID</th>
-                            <td>1</td>
+                            <td id="studentId"></td>
                         </tr>
                         <tr>
                             <th>Fullname</th>
-                            <td>Ali Jalilov</td>
+                            <td id="studentFullname"></td>
                         </tr>
                         <tr>
                             <th>Email</th>
-                            <td>ali.jalilov@code.edu.az</td>
+                            <td id="studentEmail"></td>
                         </tr>
                         <tr>
                             <th>Username</th>
-                            <td>alialiyev</td>
+                            <td id="studentUsername"></td>
                         </tr>
                         <tr>
                             <th>Teacher ID</th>
-                            <td>2</td>
+                            <td id="studentTeacherId"></td>
                         </tr>
                     </table>
+
+                    <ul id="gradesList">
+                        <!-- API-dən gələn tapşırıq və qiymətlər buraya əlavə olunacaq -->
+                    </ul>
+
 
                     <a href="#" id="openModalBtn"
                         class="inline-block mt-8 px-8 py-2 rounded-full text-xl font-bold text-white bg-blue-800 hover:bg-blue-900 transition-transform duration-300 hover:scale-105">
@@ -198,11 +204,11 @@
                     <table>
                         <tr>
                             <th>Transcript</th>
-                            <td><a href="./student-page-transcript.html" style="color: blue;">LINK</a></td>
+                            <td><a href="https://github.com/safarxe" style="color: blue;">LINK</a></td>
                         </tr>
                         <tr>
                             <th>Overall Grade</th>
-                            <td>82.46%</td>
+                            <td>82.46% (no dinámico) </td>
                         </tr>
                         <tr>
                             <th>Homework</th>
@@ -255,6 +261,11 @@
             <h2 class="text-2xl mb-4">Edit</h2>
             <form id="editForm">
                 <div class="mb-4">
+                    <label for="editid" class="block text-sm font-medium text-gray-700">ID</label>
+                    <input type="text" id="editID" name="fullname" value="Ali Jalilov"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <div class="mb-4">
                     <label for="editFullname" class="block text-sm font-medium text-gray-700">Fullname</label>
                     <input type="text" id="editFullname" name="fullname" value="Ali Jalilov"
                         class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
@@ -263,6 +274,12 @@
                     <label for="editEmail" class="block text-sm font-medium text-gray-700">Email</label>
                     <input type="email" id="editEmail" name="email" value="ali.jalilov@code.edu.az"
                         class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <div class="mb-4">
+                        <label for="editUsername" class="block text-sm font-medium text-gray-700">Username</label>
+                        <input type="text" id="editUsername" name="fullname" value="Ali Jalilov"
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+
                 </div>
                 <div class="flex justify-end">
                     <button type="button" onclick="closeEditModal()"
@@ -283,9 +300,6 @@
             <ul id="gradesList">
         </div>
     </div>
-
-    <script src="student-page-grades.js"></script>
-
 
 
 
@@ -319,8 +333,9 @@
             setTimeout(() => notificationIcon.classList.remove('scale-110'), 200);
         }, 5000);
     </script>
-    <script src="./student-page-edit.js"></script>
-    <script src="./student-page-grades.js"></script>
+    <script src="./student-page-edit.js" type="module"></script>
+    <script type="module" src="./student-page-grades.js" type="module"></script>
+
 </body>
 
 </html>
