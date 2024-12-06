@@ -50,27 +50,44 @@
                 </a>
             </div>
             <h1 class="my-6 d-flex text-center text-2xl ">Tasks</h1>
-            <div class="bg-white rounded-xl shadow-lg mb-6 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl all-tasks">
-                <div class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
-                    <span class="material-icons-outlined mr-2">task</span>
-                    React
-                    <span class="ml-32">0/100</span>
-                    <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
-                </div>
-                
+            <div class="all-tasks">
+                <!-- <div class="bg-white rounded-xl shadow-lg mb-6 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl all-tasks"> -->
+                    <!-- <div class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
+                        <span class="material-icons-outlined mr-2">task</span>
+                        <p class="w-44 trubance"></p>
+                        <span class="ml-8">0/100</span>
+                        <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
+                    </div> -->
+                    
+                <!-- </div> -->
             </div>
         </aside>
         
         <main class="flex-1 p-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 tasks">
-                <div class="bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up static z-1" style="animation-delay: 0.1s">
-                    <h3 class="text-xl font-bold text-indigo-800">Stats Card 1</h3>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up static z-1" style="animation-delay: 0.1s">
-                    <h3 class="text-xl font-bold text-indigo-800">Stats Card 1</h3>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up static z-1" style="animation-delay: 0.1s">
-                    <h3 class="text-xl font-bold text-indigo-800">Stats Card 1</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 tasks ">
+                <!-- <div class="bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up static z-1 task-list tasks-list-false" style="animation-delay: 0.1s">
+                    <div class="flex justify-between content-center items-center">
+                        <h1 class="text-2xl">React</h1>
+                        <span>100/100</span>
+                    </div>
+                    <p class="mt-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="flex justify-between content-center items-center mt-20">
+                        <p class="text-xs">widiadjwiadj</p>
+                        <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
+                    </div>
+                </div> -->
+            </div>
+            <div class="h-screen hidden">
+                <div class="bg-white rounded-xl shadow-lg p-6 h-4/5  transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up static z-1 task-list tasks-list-false" style="animation-delay: 0.1s">
+                    <div class="flex justify-between content-center items-center">
+                        <h1 class="text-2xl">React</h1>
+                        <span>100/100</span>
+                    </div>
+                    <p class="mt-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="flex justify-between content-center items-center mt-20">
+                        <p class="text-xs">widiadjwiadj</p>
+                        <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
+                    </div>
                 </div>
             </div>
         </main>

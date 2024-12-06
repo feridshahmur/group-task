@@ -42,6 +42,10 @@
     animation: slideUp 0.5s ease-out forwards;
 }
 
-/* body{
-    max-width: 88% !important;
-} */
+.all-tasks{
+    cursor: pointer;
+}
+
+.tasks{
+    cursor: pointer;
+}
