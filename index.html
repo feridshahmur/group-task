@@ -3,12 +3,192 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/output.css">
-    <title>Vite App</title>
+    <title>Responsive About Section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/assets/css/fat.css" />
   </head>
-  <body>
-   
+  <body class="bg-gray-100 font-sans">
+    <div class="content">
+      <!-- Navigation -->
+      <nav class="nav">
+        <div class="container">
+          <a href="#" class="logo">Classroom</a>
+          <button id="menu-btn" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div id="nav-links" class="nav-links">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="#our-teachers" class="nav-item">Our Teachers</a>
+            <a href="#partners" class="nav-item">Our Partners</a>
+          </div>
+        </div>
+      </nav>
 
-    <script type="module" src="./src/script/main.js"></script>
+      <!-- About Section -->
+      <div class="about">
+        <div class="about-content">
+          <h1 class="about-title">About Us</h1>
+          <p class="about-text">
+            Welcome to Classroom Management, where learning and teaching meet innovation. Our platform is designed to empower educators and students, providing a seamless environment to manage assignments, track progress, and foster collaboration. We believe education should be simple, engaging, and accessible to everyone. With tools tailored for both teachers and learners, our goal is to make the classroom experience more organized and productive, whether it's in-person or online.
+          </p>
+          <div class="button-group">
+            <a href="regiter-teacher.html"><button class="btn-teacher">Teacher register</button></a>
+            <a href="sagird-register.html"><button class="btn-student">Student register</button></a>
+          </div>
+        </div>
+        <div class="about-image-container">
+          <img
+            src="./src/assets/images/DALL·E 2024-12-06 17.16.00 - A modern and vibrant illustration of a collaborative classroom environment in a futuristic style, focusing on students and a teacher engaged in learni.webp"
+            alt="AI Illustration"
+            class="about-image"
+          />
+        </div>
+      </div>
+    </div>
+   
+    
+    <section id="our-teachers" class="our-teachers">
+      <h1>Our Teachers</h1>
+    
+      <!-- Sunal Teacher Section -->
+      <section id="teacher-section" class="teacher-section">
+        <div class="teacher-container">
+          <div class="teacher-image">
+            <img src="./src/assets/images/sunalm.jpg" alt="Teacher Sunal" />
+          </div>
+          <div class="teacher-info">
+            <h2>SUNAL JABILI</h2>
+            <h3>Frontend Developer</h3>
+            <p>
+              Kursumuzun ən geniş qəlbli müəllimiyəm, tələbələrimi çox sevirəm (şübhəli) və onlara task verməkdən həzz 
+              alıram. 
+            </p>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Kanan Teacher Section -->
+      <section id="teacher-section" class="teacher-section reverse">
+        <div class="teacher-container">
+          <div class="teacher-image">
+            <img src="./src/assets/images/kenanm.jpg" alt="Teacher Kanan" />
+          </div>
+          <div class="teacher-info">
+            <h2>KANAN AMİROV</h2>
+            <h3>Frontend Developer</h3>
+            <p>
+              Mən kursun ən anlayışlı və ən gülərüz müəllimiyəm.(opsiyonel)
+            </p>
+          </div>
+        
+        </div>
+      </section>
+    </section>
+
+<!-- ppartners -->
+
+    <section class="partners-section" id="partners">
+      <h1>Trusted by</h1>
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <img src="./src/assets/images/azmiu.png" alt="azmiu" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/code.png" alt="code" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/Az-Resp-elm-tehsil-naziriyi-logo-removebg-preview.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/NAA_logo-1024x902.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/ada.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/aztu.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/dia.png" alt="#" /> 
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/bdu.jpg" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/azmiu.png" alt="azmiu" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/code.png" alt="code" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/polytechnic.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/koch.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/barcelona.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/Boğaziçi.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/odtu.png" alt="#" /> 
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/atu.avif" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/code.png" alt="code" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/polytechnic.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/koch.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/barcelona.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/ada.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/aztu.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/dia.png" alt="#" /> 
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/bdu.jpg" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/azmiu.png" alt="azmiu" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/barcelona.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/Boğaziçi.png" alt="#" />
+          </div>
+          <div class="carousel-item">
+            <img src="./src/assets/images/odtu.png" alt="#" /> 
+          </div>
+        </div>
+      </div>
+      <div class="carousel-dots"></div>
+    </section>
+    
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2024 My Site. All rights reserved.</p>
+    </footer>
+    <script src="./src/script/fat.js"></script>
   </body>
 </html>
