@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Dashboard</title>
+    <title>Student Info</title>
     <link rel="stylesheet" href="./index.css">
     <link
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
@@ -177,7 +177,7 @@
                         </tr>
                     </table>
 
-                    <a href="#"
+                    <a href="#" id="openModalBtn"
                         class="inline-block mt-8 px-8 py-2 rounded-full text-xl font-bold text-white bg-blue-800 hover:bg-blue-900 transition-transform duration-300 hover:scale-105">
                         Grades
                     </a>
@@ -198,7 +198,7 @@
                     <table>
                         <tr>
                             <th>Transcript</th>
-                            <td><a href="https://github.com/safarxe" style="color: blue;">LINK</a></td>
+                            <td><a href="./student-page-transcript.html" style="color: blue;">LINK</a></td>
                         </tr>
                         <tr>
                             <th>Overall Grade</th>
@@ -275,6 +275,20 @@
         </div>
     </div>
 
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h2>Modal Başlığı</h2>
+            <ul id="gradesList">
+        </div>
+    </div>
+
+    <script src="student-page-grades.js"></script>
+
+
+
+
     <script>
         // Mobile menu functionality
         const mobileMenuButton = document.querySelector('.mobile-menu-button');
@@ -306,6 +320,7 @@
         }, 5000);
     </script>
     <script src="./student-page-edit.js"></script>
+    <script src="./student-page-grades.js"></script>
 </body>
 
 </html>
