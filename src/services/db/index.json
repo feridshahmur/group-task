@@ -7,6 +7,7 @@
       "username": "KananAmir",
       "password": "Amirov123",
       "major": "programming",
+      "islogged":"true",
       "profileImage": "https://cdn3d.iconscout.com/3d/premium/thumb/teacher-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--professor-education-profession-pack-people-icons-4936175.png?f=webp"
     }
   ],
@@ -19,6 +20,8 @@
       "password": "Aliyev123",
       "profileImage": "https://static.vecteezy.com/system/resources/previews/021/770/056/non_2x/avatar-of-a-student-character-free-vector.jpg",
       "teacherId": "2",
+      "islogged":"true",
+
       "grades": [
         {
           "taskId": "1",

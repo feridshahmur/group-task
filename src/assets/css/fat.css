@@ -1,299 +1,409 @@
 *{
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #F4F9FF; 
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #F4F9FF; 
 }
 
 .content {
-    flex: 1;
+  flex: 1;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 
 .nav {
-    background-color:  rgb(117, 50, 250); 
-    padding: 15px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color:  rgb(117, 50, 250); 
+  padding: 7px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
 }
 
 .nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    font-size: 1.7rem;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
 }
 
 .nav-links {
-    display: flex;
-    
+  display: flex;
+
 }
 
 .nav-item {
-    color: white;
-    text-decoration: none;
-    margin: 0 16px;
-    transition: color 0.3s ease;
-    font-size: 1.1rem;
+  color: white;
+  text-decoration: none;
+  margin: 0 16px;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
 }
 
 .nav-item:hover {
-    color: rgb(219, 234, 254); 
+  color: rgb(219, 234, 254); 
 }
 
 .menu-icon {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    border: none;
-    background: none;
-    cursor: pointer;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .menu-icon span {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    border-radius: 3px;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
 }
 
 .about {
-    display: flex;
-   
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-    padding: 100px 20px 50px; 
-    gap: 40px;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 100px 20px 50px; 
+  gap: 40px;
 }
 
 .about-content {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 .about-title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: rgb(27, 80, 194); 
-    margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(27, 80, 194); 
+  margin-bottom: 20px;
 }
 
 .about-text {
-    font-size: 1.25rem;
-    color: rgb(21, 53, 122); 
+  font-size: 1.25rem;
+  color: rgb(21, 53, 122); 
+  margin-bottom: 30px;
 }
 
 .button-group {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .btn-teacher {
-    padding: 15px 30px;
-    background-color: rgb(79, 70, 229); 
-    border: none;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 15px 30px;
+  background-color: rgb(79, 70, 229); 
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-teacher:hover {
-    background-color: rgb(48, 43, 160); 
-    transform: scale(1.05);
+  background-color: rgb(48, 43, 160); 
+  transform: scale(1.05);
 }
 
 .btn-teacher:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 .btn-student {
-    padding: 15px 30px;
-    background-color: rgb(79, 70, 229); 
-    border: none;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 15px 30px;
+  background-color: rgb(79, 70, 229); 
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-student:hover {
-    background-color: rgb(48, 43, 160); 
-    transform: scale(1.05);
+  background-color: rgb(48, 43, 160); 
+  transform: scale(1.05);
 }
 
 .btn-student:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .about-image-container {
-    max-width: 500px;
+  max-width: 500px;
 }
 
 .about-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 /* General Section Styling */
 .our-teachers {
-    text-align: center;
-    padding: 60px 20px;
-  }
-  
-  .our-teachers h1 {
-    font-size: 36px;
-    color: rgb(27, 80, 194);
-    margin-bottom: 40px;
-  }
-  
-  /* Teacher Section Styling */
-  .teacher-section {
-    background-color: rgb(232, 244, 255);
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  text-align: center;
+  bottom: 0;
+}
+
+.our-teachers h1 {
+  font-size: 2.7rem;
+  color: rgb(27, 80, 194);
+  margin-bottom: 40px;
+  padding: 50px 0;
+}
+
+/* Teacher Section Styling */
+.teacher-section {
+  background-color: rgb(232, 244, 255);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teacher-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Reverse Styling for Kanan */
+.teacher-section.reverse .teacher-container {
+  flex-direction: row-reverse;
+}
+
+/* Teacher Image Styling */
+.teacher-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgb(99, 102, 241);
+}
+
+/* Teacher Info Styling */
+.teacher-info {
+  max-width: 600px;
+}
+
+.teacher-info h2 {
+  font-size: 28px;
+  color: rgb(27, 80, 194);
+  margin-bottom: 20px;
+}
+
+.teacher-info h3 {
+  font-size: 20px;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.teacher-info p {
+  font-size: 16px;
+  color: rgb(51, 51, 51);
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .teacher-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
+    flex-direction: column;
+    text-align: center;
   }
-  
-  /* Reverse Styling for Kanan */
+
   .teacher-section.reverse .teacher-container {
-    flex-direction: row-reverse;
+    flex-direction: column;
   }
-  
-  /* Teacher Image Styling */
+
   .teacher-image img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid rgb(99, 102, 241);
-  }
-  
-  /* Teacher Info Styling */
-  .teacher-info {
-    max-width: 600px;
-  }
-  
-  .teacher-info h2 {
-    font-size: 28px;
-    color: rgb(27, 80, 194);
     margin-bottom: 20px;
   }
-  
+
+  .teacher-info h2 {
+    font-size: 24px;
+  }
+
   .teacher-info h3 {
-    font-size: 20px;
-    color: rgb(51, 51, 51);
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 18px;
   }
-  
+
   .teacher-info p {
-    font-size: 16px;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
+    font-size: 14px;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .teacher-container {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .teacher-section.reverse .teacher-container {
-      flex-direction: column;
-    }
-  
-    .teacher-image img {
-      margin-bottom: 20px;
-    }
-  
-    .teacher-info h2 {
-      font-size: 24px;
-    }
-  
-    .teacher-info h3 {
-      font-size: 18px;
-    }
-  
-    .teacher-info p {
-      font-size: 14px;
-    }
-  }
-  
+}
+
 
 
 .footer {
-    background-color: rgb(117, 50, 250); 
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: rgb(117, 50, 250); 
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 
 
 @media (max-width: 768px) {
-    .about {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-content p{
-        font-size: 1rem;
-    }
-    .button-group {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .about {
+      flex-direction: column;
+      text-align: center;
+  }
+  .about-content p{
+      font-size: 1rem;
+  }
+  .button-group {
+      flex-direction: column;
+      gap: 10px;
+  }
 
-    .menu-icon {
-        display: flex;
-    }
+  .menu-icon {
+      display: flex;
+      
+  }
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+     
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: rgb(117, 50, 250); 
+      padding-top: 10px;
+      align-items: center;
+  }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color:  rgb(117, 50, 250); 
-        padding-top: 8px;
-        align-items: center;
-    }
-
-    .nav-item {
-        margin: 10px 0;
-    }
+  .nav-item {
+      margin: 10px 0;
+  }
 }
+
+/* Partners Section */
+.partners-section {
+  padding: 40px 16px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.partners-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 120px; /* Adjust for responsiveness */
+  margin: 0 10px;
+  text-align: center;
+}
+
+.carousel-item img {
+  max-width: 80px; /* Adjust size for mobile */
+  height: auto;
+  margin: 0 auto;
+}
+
+.carousel-item p {
+  margin-top: 8px;
+  font-size: 14px; /* Smaller font for mobile */
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.carousel-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: #d3d3d3;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-dots button.active {
+  background-color: #555;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .carousel-item {
+    min-width: 100px;
+  }
+
+  .carousel-item img {
+    max-width: 60px;
+  }
+
+  .carousel-item p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+    min-width: 80px;
+  }
+
+  .carousel-item img {
+    max-width: 50px;
+  }
+
+  .carousel-item p {
+    font-size: 10px;
+  }
+
+  .partners-section h1 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+/* nav kisminin sag ust  kosesine user profili ekle yuvarlak formada  profil fotosu olsun uzerine basinca altb tarafa dogru heighti artsin ve log out kismi olsun log out oldugu zaman bizi index.html sayfasina geri gondersin */
